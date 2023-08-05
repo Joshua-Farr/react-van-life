@@ -1,6 +1,5 @@
 import React from "react";
-import Footer from "./Footer";
-import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
 import "../Styling/Vans.css";
 
 export default function Vans() {
@@ -16,21 +15,24 @@ export default function Vans() {
   }, []);
 
   const vansList = vans.map((van) => (
-    <div className="van-container">
-      <img src={van.imageUrl} alt="" className="van-img" />
-      <div className="van-info">
-        <h3 className="van-name">{van.name}</h3>
-        <h3>${van.price}/day</h3>
+    <Link to={`/vans/${van.id}`} className="van-link">
+      <div key={van.id} className="van-container">
+        <img src={van.imageUrl} alt="" className="van-img" />
+        <div className="van-info">
+          <h3 className="van-name">{van.name}</h3>
+          <h3>${van.price}/day</h3>
+        </div>
+        <div className={`tag ${van.type}`}>{van.type}</div>
       </div>
-      <div className={`tag ${van.type}`}>{van.type}</div>
-    </div>
+    </Link>
   ));
 
   return (
     <>
-      <NavBar />
-      <div className="vans-list">{vansList}</div>
-      <Footer />
+      <div className="van-list-container">
+        <h1>Explore our van options</h1>
+        <div className="vans-list">{vansList}</div>
+      </div>
     </>
   );
 }

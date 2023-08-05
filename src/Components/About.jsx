@@ -1,6 +1,4 @@
 import React from "react";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
 import "../Styling/About.css";
 import { Link } from "react-router-dom";
 import bgImg from "../assets/man-on-a-van.png";
@@ -8,7 +6,6 @@ import bgImg from "../assets/man-on-a-van.png";
 export default function About() {
   return (
     <>
-      <NavBar />
       <div>
         <img
           src={bgImg}
@@ -35,7 +32,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

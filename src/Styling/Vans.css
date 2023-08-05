@@ -39,11 +39,20 @@
   background: #161616;
 }
 
+.van-list-container {
+  padding: 30px;
+  background-color: #fff7ed;
+}
+
 .vans-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px;
-  padding: 30px;
   justify-items: center;
-  background-color: #fff7ed;
+  margin-top: 1em;
+}
+
+.van-link {
+  text-decoration: none;
+  color: inherit;
 }

@@ -6,7 +6,6 @@ import "./MainContent.css";
 export default function MainContent() {
   return (
     <>
-      <NavBar />
       <div className="main-content">
         <h1 className="title">
           You got the travel plans, we got the travel vans.
@@ -17,7 +16,6 @@ export default function MainContent() {
         </p>
         <button className="find-van-btn">Find your van</button>
       </div>
-      <Footer />
     </>
   );
 }
