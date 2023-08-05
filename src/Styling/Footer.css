@@ -1,0 +1,13 @@
+.footer {
+  background-color: #252525;
+  color: #aaaaaa;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 1.52em;
+  padding-bottom: 1.52em;
+}

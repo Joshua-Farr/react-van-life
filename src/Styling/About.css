@@ -1,0 +1,42 @@
+.main-text {
+  color: #161616;
+  font-size: 2rem;
+  line-height: 38px;
+}
+
+.about-text {
+  color: #161616;
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 500;
+  margin-bottom: 2.5em;
+  margin-top: 2em;
+}
+
+.link-button {
+  border: transparent;
+  color: white;
+  background-color: #161616;
+  border-radius: 10px;
+  padding: 0.85em 1.5em;
+  font-weight: 700;
+  margin-top: 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link-button:hover {
+  transform: translate(1px, 1px);
+}
+
+.about-section {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-card {
+  padding: 2em;
+  background: #ffcc8d;
+}

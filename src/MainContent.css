@@ -1,0 +1,27 @@
+.main-content {
+  padding: 2em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./assets/hero-img.png);
+  color: white;
+}
+.main-content button {
+  color: white;
+  background-color: #ff8c38;
+  border: transparent;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.main-content button:hover,
+.main-content button:focus {
+  background-image: linear-gradient(rgb(0 0 0/5%) 0 0);
+  cursor: pointer;
+}
+
+.main-content p {
+  margin-bottom: 3em;
+  margin-top: 1.5em;
+}

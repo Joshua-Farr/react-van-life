@@ -1,0 +1,39 @@
+.navBar {
+  background: #fff7ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.125em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+.logo {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: black;
+  user-select: none;
+  text-decoration: none;
+}
+
+.logo:hover,
+.logo:focus {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  margin-left: 2em;
+  color: #4d4d4d;
+  size: 1rem;
+  font-weight: 600;
+}
+
+.link:hover,
+.link:focus {
+  cursor: pointer;
+  color: #161616;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
