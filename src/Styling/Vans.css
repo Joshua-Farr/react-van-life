@@ -1,0 +1,49 @@
+.van-img {
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.van-name {
+  color: #161616;
+  font-size: 1.25rem;
+}
+
+.tag {
+  background: #e17654;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.35em 0.75em;
+  color: #ffead0;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+.van-container {
+  max-width: 350px;
+}
+
+.van-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.rugged {
+  background-color: #115e59;
+}
+
+.luxury {
+  background: #161616;
+}
+
+.vans-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  padding: 30px;
+  justify-items: center;
+  background-color: #fff7ed;
+}

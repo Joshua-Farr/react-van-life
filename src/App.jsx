@@ -5,6 +5,7 @@ import MainContent from "./MainContent";
 import About from "./Components/About";
 import Vans from "./Components/Vans";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./server";
 
 export default function App() {
   return (
