@@ -37,3 +37,10 @@
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
+
+.selected {
+  color: #161616;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-weight: bold;
+}

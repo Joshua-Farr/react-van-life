@@ -1,20 +1,45 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, NavLink } from "react-router-dom";
 import "../../Styling/HostLayout.css";
 
 export default function HostLayout() {
   return (
     <div className="host-layout-container">
       <nav className="host-nav">
-        <Link to="host" className="host-layout-link">
+        <NavLink
+          to="/host"
+          end
+          className={({ isActive }) =>
+            isActive ? `host-layout-link selected` : `host-layout-link`
+          }
+        >
           Dashboard
-        </Link>
-        <Link to="income" className="host-layout-link">
+        </NavLink>
+        <NavLink
+          to="income"
+          className={({ isActive }) =>
+            isActive ? `host-layout-link selected` : `host-layout-link`
+          }
+        >
           Income
-        </Link>
-        <Link to="reviews" className="host-layout-link">
+        </NavLink>
+
+        <NavLink
+          to="vans"
+          className={({ isActive }) =>
+            isActive ? `host-layout-link selected` : `host-layout-link`
+          }
+        >
+          Vans
+        </NavLink>
+        <NavLink
+          to="reviews"
+          className={({ isActive }) =>
+            isActive ? `host-layout-link selected` : `host-layout-link`
+          }
+        >
           Reviews
-        </Link>
+        </NavLink>
       </nav>
       <Outlet />
     </div>

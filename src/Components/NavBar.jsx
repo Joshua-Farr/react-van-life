@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../Styling/NavBar.css";
 
 export default function NavBar() {
@@ -9,15 +9,24 @@ export default function NavBar() {
         #VANLIFE
       </Link>
       <div>
-        <Link to="host" className="link">
+        <NavLink
+          to="host"
+          className={({ isActive }) => (isActive ? `link selected` : `link`)}
+        >
           Host
-        </Link>
-        <Link to="about" className="link">
+        </NavLink>
+        <NavLink
+          to="about"
+          className={({ isActive }) => (isActive ? `link selected` : `link`)}
+        >
           About
-        </Link>
-        <Link to="vans" className="link">
+        </NavLink>
+        <NavLink
+          to="vans"
+          className={({ isActive }) => (isActive ? `link selected` : `link`)}
+        >
           Vans
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
+import { Link } from "react-router-dom";
 import "./MainContent.css";
 
 export default function MainContent() {
@@ -14,7 +15,9 @@ export default function MainContent() {
           Add adventure to your life by joining the #vanlife movement. Rent the
           perfect van to make your perfect road trip.
         </p>
-        <button className="find-van-btn">Find your van</button>
+        <Link to="/vans">
+          <button className="find-van-btn">Find your van</button>
+        </Link>
       </div>
     </>
   );
