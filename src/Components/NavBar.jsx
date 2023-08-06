@@ -9,10 +9,13 @@ export default function NavBar() {
         #VANLIFE
       </Link>
       <div>
-        <Link to="/about" className="link">
+        <Link to="host" className="link">
+          Host
+        </Link>
+        <Link to="about" className="link">
           About
         </Link>
-        <Link to="/vans" className="link">
+        <Link to="vans" className="link">
           Vans
         </Link>
       </div>
