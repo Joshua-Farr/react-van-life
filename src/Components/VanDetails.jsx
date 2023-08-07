@@ -16,7 +16,7 @@ export default function VanDetails() {
     <div className="van-detail-container">
       {van ? (
         <div className="van-detail">
-          <img src={van.imageUrl} />
+          <img src={van.imageUrl} className="van-img-large" />
           <div className={`tag ${van.type}`}>{van.type}</div>
           <h2>{van.name}</h2>
           <p className="van-price">

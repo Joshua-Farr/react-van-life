@@ -4,14 +4,6 @@
   background: #fff7ed;
 }
 
-.van-detail-container .back-button {
-  color: black;
-  text-decoration: none;
-}
-
-.van-detail-container .back-button:visited {
-}
-
 .van-detail-container .back-button span {
   text-decoration: underline;
 }

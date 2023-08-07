@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, Outlet, NavLink } from "react-router-dom";
 import "../../Styling/HostVanDetails.css";
 
 export default function HostVanDetails() {
@@ -17,23 +17,57 @@ export default function HostVanDetails() {
   }
 
   return (
-    <div className="host-van-container">
-      <div className="van-details-section">
-        <img src={currentVan.imageUrl} alt="" />
-        <div className="text-details">
-          <div className={`tag ${currentVan.type}`}>{currentVan.type}</div>
-          <h1>{currentVan.name}</h1>
-          <h3>
-            ${currentVan.price}
-            <span>/day</span>
-          </h3>
+    <section>
+      <Link to=".." relative="path" className="back-button">
+        &larr; <span>Back to all vans</span>
+      </Link>
+      <div className="host-van-container">
+        <div className="van-details-section">
+          <img src={currentVan.imageUrl} alt="" />
+          <div className="text-details">
+            <div className={`tag ${currentVan.type}`}>{currentVan.type}</div>
+            <h1>{currentVan.name}</h1>
+            <h3>
+              ${currentVan.price}
+              <span>/day</span>
+            </h3>
+          </div>
         </div>
+        <div className="host-van-details-section">
+          <NavLink
+            to="."
+            end
+            className={({ isActive }) =>
+              isActive
+                ? `host-van-detail-link selected`
+                : `host-van-detail-link`
+            }
+          >
+            Details
+          </NavLink>
+          <NavLink
+            to="HostVanPricing"
+            className={({ isActive }) =>
+              isActive
+                ? `host-van-detail-link selected`
+                : `host-van-detail-link`
+            }
+          >
+            Pricing
+          </NavLink>
+          <NavLink
+            to="HostVanPhotos"
+            className={({ isActive }) =>
+              isActive
+                ? `host-van-detail-link selected`
+                : `host-van-detail-link`
+            }
+          >
+            Photos
+          </NavLink>
+        </div>
+        <Outlet />
       </div>
-      <div className="host-van-details-section">
-        <Link to="">Details</Link>
-        <Link to="">Pricing</Link>
-        <Link to="">Photos</Link>
-      </div>
-    </div>
+    </section>
   );
 }
