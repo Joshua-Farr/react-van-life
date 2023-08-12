@@ -1,0 +1,13 @@
+.host-van-detail-info > h4 > span {
+  font-weight: 500;
+}
+
+.host-van-detail-info > h4 {
+  margin-bottom: 20px;
+}
+
+.host-van-detail-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+}
