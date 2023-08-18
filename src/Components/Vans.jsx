@@ -24,7 +24,7 @@ export default function Vans() {
   const vansList = filteredVans.map((van) => (
     <Link
       to={van.id}
-      state={{ search: `?${searchParams.toString()}` }}
+      state={{ search: `?${searchParams.toString()}`, type: typeFilter }}
       className="van-link"
     >
       <div key={van.id} className="van-container">

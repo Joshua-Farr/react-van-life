@@ -13,6 +13,7 @@ import HostVanDetails from "./Components/Hosts/HostVanDetails";
 import HostVanPhotos from "./Components/Hosts/HostVanPhotos";
 import HostVanPricing from "./Components/Hosts/HostVanPricing";
 import Details from "./Components/Hosts/Details";
+import NotFound from "./Components/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./server";
 
@@ -36,6 +37,7 @@ export default function App() {
               <Route path="HostVanPricing" element={<HostVanPricing />}></Route>
             </Route>
           </Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
