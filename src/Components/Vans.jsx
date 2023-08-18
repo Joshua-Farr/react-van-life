@@ -22,7 +22,11 @@ export default function Vans() {
     : vans;
 
   const vansList = filteredVans.map((van) => (
-    <Link to={`/vans/${van.id}`} className="van-link">
+    <Link
+      to={van.id}
+      state={{ search: `?${searchParams.toString()}` }}
+      className="van-link"
+    >
       <div key={van.id} className="van-container">
         <img src={van.imageUrl} alt="" className="van-img" />
         <div className="van-info">
@@ -41,19 +45,31 @@ export default function Vans() {
         <div className="van-list-filter-buttons">
           <button
             onClick={() => setSearchParams({ type: "simple" })}
-            className="van-type-btn"
+            className={
+              typeFilter === `simple`
+                ? "van-type-btn selectedbtn"
+                : "van-type-btn"
+            }
           >
             Simple
           </button>
           <button
             onClick={() => setSearchParams({ type: "luxury" })}
-            className="van-type-btn"
+            className={
+              typeFilter === `luxury`
+                ? "van-type-btn selectedbtn"
+                : "van-type-btn"
+            }
           >
             Luxury
           </button>
           <button
             onClick={() => setSearchParams({ type: "rugged" })}
-            className="van-type-btn"
+            className={
+              typeFilter === `rugged`
+                ? "van-type-btn selectedbtn"
+                : "van-type-btn"
+            }
           >
             Rugged
           </button>
