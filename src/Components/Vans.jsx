@@ -7,7 +7,6 @@ export default function Vans() {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
-  console.log(typeFilter);
 
   React.useEffect(() => {
     fetch("/api/vans")
@@ -18,7 +17,11 @@ export default function Vans() {
       });
   }, []);
 
-  const vansList = vans.map((van) => (
+  const filteredVans = typeFilter
+    ? vans.filter((van) => van.type === typeFilter)
+    : vans;
+
+  const vansList = filteredVans.map((van) => (
     <Link to={`/vans/${van.id}`} className="van-link">
       <div key={van.id} className="van-container">
         <img src={van.imageUrl} alt="" className="van-img" />
@@ -35,6 +38,30 @@ export default function Vans() {
     <>
       <div className="van-list-container">
         <h1>Explore our van options</h1>
+        <div className="van-list-filter-buttons">
+          <button
+            onClick={() => setSearchParams({ type: "simple" })}
+            className="van-type-btn"
+          >
+            Simple
+          </button>
+          <button
+            onClick={() => setSearchParams({ type: "luxury" })}
+            className="van-type-btn"
+          >
+            Luxury
+          </button>
+          <button
+            onClick={() => setSearchParams({ type: "rugged" })}
+            className="van-type-btn"
+          >
+            Rugged
+          </button>
+          <button onClick={() => setSearchParams({})} className="clear-filters">
+            Clear Filters
+          </button>
+        </div>
+
         <div className="vans-list">{vansList}</div>
       </div>
     </>

@@ -58,3 +58,27 @@
   text-decoration: none;
   color: inherit;
 }
+
+.van-type-btn {
+  background-color: #ffead0 !important;
+  padding: 8px;
+  padding-inline: 20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+  border: transparent;
+}
+
+.van-list-filter-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 10px;
+}
+
+.clear-filters {
+  color: black;
+  background-color: transparent;
+  border: transparent;
+  text-decoration: underline;
+}
