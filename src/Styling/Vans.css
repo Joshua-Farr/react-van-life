@@ -66,7 +66,7 @@
   text-decoration: none;
   color: black;
   border-radius: 8px;
-  border: transparent;
+  border: 2px solid transparent;
 }
 
 .van-list-filter-buttons {
@@ -76,9 +76,20 @@
   margin-top: 10px;
 }
 
+.van-type-btn:hover,
+.van-type-btn:focus {
+  border: 2px solid #161616;
+  cursor: pointer;
+}
+
 .clear-filters {
   color: black;
   background-color: transparent;
   border: transparent;
   text-decoration: underline;
+}
+
+.clear-filters:hover,
+.clear-filters:focus {
+  cursor: pointer;
 }
