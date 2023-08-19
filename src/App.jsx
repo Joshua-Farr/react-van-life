@@ -14,6 +14,7 @@ import HostVanPhotos from "./Components/Hosts/HostVanPhotos";
 import HostVanPricing from "./Components/Hosts/HostVanPricing";
 import Details from "./Components/Hosts/Details";
 import NotFound from "./Components/NotFound";
+import Login from "./Components/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./server";
 
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="about" element={<About />}></Route>
           <Route path="vans" element={<Vans />}></Route>
           <Route path="vans/:id" element={<VanDetails />}></Route>
+          <Route path="login" element={<Login />}></Route>
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />}></Route>
             <Route path="income" element={<Income />}></Route>

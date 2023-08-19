@@ -27,6 +27,12 @@ export default function NavBar() {
         >
           Vans
         </NavLink>
+        <NavLink
+          to="login"
+          className={({ isActive }) => (isActive ? `link selected` : `link`)}
+        >
+          Login
+        </NavLink>
       </div>
     </div>
   );
