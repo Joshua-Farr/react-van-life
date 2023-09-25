@@ -1,8 +1,13 @@
-# React + Vite
+# React Van Life
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+React Van Life is a project that celebrates the adventurous spirit of van life enthusiasts. This web application provides a platform for users to list and reserve a van. Similar to Airbnb
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
+
+- **Discover Van Life**: Explore a curated collection of vans added by users, with dynamically rendered routes for each van in the database. 
+
+- **User Profiles**: Multiple nested routes allowing logged in users to see the stats of their listed vans. 
+
+- **User-Friendly Interface**: The app features an intuitive and visually appealing UI for an enjoyable user experience.
